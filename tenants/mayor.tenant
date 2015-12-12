@@ -1,0 +1,27 @@
+{
+  "name": "mayor",
+  "priority": 10,
+
+  "tagCriteria": {
+    "light": 1,
+    "door": 1,
+    "knowledge": 8,
+    "commerce": 8
+  },
+
+  "tenants": [
+    {
+      "spawn": "npc",
+      "species": ["human", "apex", "avian", "floran", "glitch", "hylotl"],
+      "type": "mayor",
+      "overrides": {
+        "damageTeamType" : "friendly"
+       }
+     }
+   ],
+
+  "rent": {
+    "periodRange": [1000.0, 1400.0],
+    "pool": "merchantGift"
+  }
+}

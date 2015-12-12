@@ -1,0 +1,36 @@
+{
+  "objectName" : "gov_desk",
+  "tags" : ["pretty","valuable","governor","gov","mod"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 170,
+  "description" : "The sort of desk that's used exclusively for making important decisions.",
+  "shortdescription" : "Governor's Desk",
+  "race" : "generic",
+
+  "apexDescription" : "What ghastly decisions were made at this desk?",
+  "avianDescription" : "Though the Avians do not value gold as highly as some, I am amazed by the craftsmanship on display here.",
+  "floranDescription" : "Sssuch a shhiny desk. Perhaps monkeymen blind when decisions made.",
+  "glitchDescription" : "Opulence. The Glitch value gold highly; one could purchase a keep with such a desk.",
+  "humanDescription" : "I don't feel important enough to sit at a desk like this.",
+  "hylotlDescription" : "Sometimes the humble make the best decisions.",
+
+  "inventoryIcon" : "gov_deskicon.png",
+  "orientations" : [
+    {
+      "dualImage" : "gov_desk.png:<color>",
+      "imagePosition" : [-24, 0],
+      "frames" : 1,
+      "animationCycle" : 0.5,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ],
+      "collision" : "platform"
+
+    }
+  ],
+  
+  "interactAction" : "ScriptConsole",
+  "interactData" : "/objects/crafting/gov_desk/governorsdesk.config"
+  
+}

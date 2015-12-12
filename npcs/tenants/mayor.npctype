@@ -1,0 +1,82 @@
+{
+  "type" : "mayor",
+  "baseType" : "base",
+  
+  "persistent" : true,
+
+  "dropPools" : [ "basicMonsterTreasure" ],
+
+  "scripts" : [
+    "/npcs/bmain.lua"
+  ],
+  "initialScriptDelta" : 5,
+  "scriptConfig" : {
+    "behavior" : "merchant",
+
+    "reactions" : {
+      "spontaneous" : [
+        [5.0, "sleep", { "timeRange" : [0.7, 0.9] }],
+        [1.0, "sit", { "timeRange" : [0.6,0.2]}],
+        [1.0, "wander", { "timeRange" : [0.2, 0.6] }]
+      ]
+    },
+
+    "merchant" : {
+      "poolsFile" : "/npcs/merchantpools.config",
+      "categories" : {
+        "default" : [ "glowmerchant", "frogtenantmerchant", "humanfurniture" ],
+        "apex" : [ "glowmerchant", "frogtenantmerchant", "apexfurniture" ],
+        "avian" : [ "glowmerchant", "frogtenantmerchant", "avianfurniture" ],
+        "floran" : [ "glowmerchant", "frogtenantmerchant", "floranfurniture" ],
+        "glitch" : [ "glowmerchant", "frogtenantmerchant", "glitchfurniture" ],
+        "human" : [ "glowmerchant", "frogtenantmerchant", "humanfurniture" ],
+        "hylotl" : [ "glowmerchant", "frogtenantmerchant", "hylotlfurniture" ],
+        "novakid" : [ "glowmerchant", "frogtenantmerchant" ]
+      },
+      "buyFactorRange" : [ 0.8, 0.9 ],
+      "sellFactorRange" : [ 0.4, 0.6 ],
+      "numItems" : 15
+    },
+    "dialog" : {
+      "merchant" : {
+        "start" : "/dialog/mayor.config:merchantStart",
+        "end" : "/dialog/mayor.config:merchantEnd",
+        "follow" : "/dialog/mayor.config:follow",
+        "welcome" : "/dialog/mayor.config:welcome",
+        "tout" : "/dialog/mayor.config:tout"
+      },
+      "flee" : {
+        "helpme" : "/dialog/mayor.config:helpme",
+        "helpthem" : "/dialog/mayor.config:helpthem",
+        "encourage" : "/dialog/mayor.config:encourage",
+        "safe" : "/dialog/mayor.config:safe"
+      },
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : "/dialog/mayor.config:tagCriteria",
+          "enclosedArea" : "/dialog/mayor.config:enclosedArea",
+          "otherDeed" : "/dialog/mayor.config:otherDeed",
+          "severe" : "/dialog/mayor.config:severe",
+          "final" : "/dialog/mayor.config:final"
+        },
+        "arrivedHome" : {
+          "beacon" : "/dialog/mayor.config:beacon",
+          "rent" : "/dialog/mayor.config:rent"
+        }
+      }
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "tophathead" } ],
+            "chest" : [ { "name" : "novakidwaistcoat" } ],
+            "legs" : [ { "name" : "piratelegs" } ],
+            "primary" : [ { "name" : "moneybagscane" } ]
+          }
+        ] ]
+    ]
+  }
+}

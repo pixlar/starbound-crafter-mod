@@ -1,0 +1,11 @@
+{
+ "name" : "Community",
+ "version" : "Beta v. Pleased Giraffe",
+  "path" : ".",
+  "dependencies" : [],
+  "metadata" : {
+    "version" : "0.1",
+    "author" : "magewish",
+    "description" : "With MoreTenants"
+  }
+}

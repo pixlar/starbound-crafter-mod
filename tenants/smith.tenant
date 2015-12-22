@@ -1,19 +1,18 @@
 {
-  "name": "mayor",
+  "name": "smith",
   "priority": 10,
 
   "colonyTagCriteria": {
     "light": 1,
     "door": 1,
-    "knowledge": 8,
-    "commerce": 8
+    "furnace": 4
   },
 
   "tenants": [
     {
       "spawn": "npc",
-      "species": ["human", "apex", "avian", "floran", "glitch", "hylotl"],
-      "type": "mayor",
+      "species": ["human", "apex", "avian", "floran", "glitch", "hylotl", "novakid"],
+      "type": "smith",
       "overrides": {
         "damageTeamType" : "friendly"
        }
@@ -22,6 +21,6 @@
 
   "rent": {
     "periodRange": [1000.0, 1400.0],
-    "pool": "merchantGift"
+    "pool": "minerGift"
   }
 }

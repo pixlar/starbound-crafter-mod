@@ -1,0 +1,74 @@
+{
+  "type" : "tailor",
+  "baseType" : "base",
+  
+  "persistent" : true,
+
+  "dropPools" : [ "basicMonsterTreasure" ],
+
+  "scripts" : [
+    "/npcs/bmain.lua"
+  ],
+  "initialScriptDelta" : 5,
+  "scriptConfig" : {
+    "behavior" : "merchant",
+
+    "reactions" : {
+      "spontaneous" : [
+        [5.0, "sleep", { "timeRange" : [0.7, 0.9] }],
+        [1.0, "sit", { "timeRange" : [0.6,0.2]}],
+        [1.0, "wander", { "timeRange" : [0.2, 0.6] }]
+      ]
+    },
+
+    "merchant" : {
+      "poolsFile" : "/npcs/merchantpools.config",
+      "categories" : {
+        "default" : [ "apexclothes", "avianclothes", "glitchclothes", "hylotlclothes", "floranclothes", "humanclothes", "novakidclothes" ]
+      },
+      "buyFactorRange" : [ 1.2, 1.3 ],
+      "sellFactorRange" : [ 0.4, 0.6 ],
+      "numItems" : 15
+    },
+    "dialog" : {
+      "merchant" : {
+        "start" : "/dialog/merchant.config:merchantStart",
+        "end" : "/dialog/merchant.config:merchantEnd",
+        "follow" : "/dialog/merchant.config:follow",
+        "welcome" : "/dialog/merchant.config:welcome",
+        "tout" : "/dialog/merchant.config:tout"
+      },
+      "flee" : {
+        "helpme" : "/dialog/merchant.config:helpme",
+        "helpthem" : "/dialog/merchant.config:helpthem",
+        "encourage" : "/dialog/merchant.config:encourage",
+        "safe" : "/dialog/merchant.config:safe"
+      },
+      "tenant" : {
+        "grumbles" : {
+          "tagCriteria" : "/dialog/merchant.config:tagCriteria",
+          "enclosedArea" : "/dialog/merchant.config:enclosedArea",
+          "otherDeed" : "/dialog/merchant.config:otherDeed",
+          "severe" : "/dialog/merchant.config:severe",
+          "final" : "/dialog/merchant.config:final"
+        },
+        "arrivedHome" : {
+          "beacon" : "/dialog/merchant.config:beacon",
+          "rent" : "/dialog/merchant.config:rent"
+        }
+      }
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "tophathead" } ],
+            "chest" : [ { "name" : "coolchest" } ],
+            "legs" : [ { "name" : "coollegs" } ]
+          }
+        ] ]
+    ]
+  }
+}

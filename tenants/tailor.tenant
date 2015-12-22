@@ -1,19 +1,18 @@
 {
-  "name": "mayor",
+  "name": "tailor",
   "priority": 10,
 
   "colonyTagCriteria": {
     "light": 1,
     "door": 1,
-    "knowledge": 8,
-    "commerce": 8
+    "loom": 4
   },
 
   "tenants": [
     {
       "spawn": "npc",
-      "species": ["human", "apex", "avian", "floran", "glitch", "hylotl"],
-      "type": "mayor",
+      "species": ["human", "apex", "avian", "floran", "glitch", "hylotl", "novakid"],
+      "type": "tailor",
       "overrides": {
         "damageTeamType" : "friendly"
        }
